@@ -1,105 +1,104 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf8" />
-<style>
-* { 
-  box-sizing: border-box;
-  margin: 0;
-  font-family: sans-serif;
-}
+  <head>
+    <meta charset="utf8" />
+    <style>
+    * { 
+      box-sizing: border-box;
+      margin: 0;
+      font-family: sans-serif;
+    }
 
-html, body {
-  height: 100%;
-}
+    html, body {
+      height: 100%;
+    }
 
-:root {
-  --height: 200px;
-  --border-radius: 12px;
-}
+    :root {
+      --height: 200px;
+      --border-radius: 12px;
+    }
 
-.atras {
-  top: 0;
-  left: 0;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  height: var(--height);
-  background: #222222;
-  color: white;
-  line-height: var(--height);
-}
+    .atras {
+      top: 0;
+      left: 0;
+      position: fixed;
+      text-align: center;
+      width: 100%;
+      height: var(--height);
+      background: #222222;
+      color: white;
+      line-height: var(--height);
+    }
 
-.frente {
-  background: black;
-  overflow: hidden;
-  left: 0;
-  top: var(--height);
-  position: absolute;
-  width: 100%;
+    .frente {
+      background: black;
+      overflow: hidden;
+      left: 0;
+      top: var(--height);
+      position: absolute;
+      width: 100%;
 
-}
-.frente__input {
-  text-align: center;
-  padding: 20px;
-}
-.frente__input input {
-  width: 100%;
-  padding: 10px;
-  border-radius: var(--border-radius);
-  font-size: 16pt;
-}
-.card {
-  background: linear-gradient(45deg, #003366, #002233);
-  border-radius: var(--border-radius);
-  width: calc(50% - 20px);
-  height: 300px;
-  border: 1px solid;
-  margin: 10px;
-  float: left;
-}
-</style>
-</head>
-<body>
+    }
+    .frente__input {
+      text-align: center;
+      padding: 20px;
+    }
+    .frente__input input {
+      width: 100%;
+      padding: 10px;
+      border-radius: var(--border-radius);
+      font-size: 16pt;
+    }
+    .card {
+      background: linear-gradient(45deg, #003366, #002233);
+      border-radius: var(--border-radius);
+      width: calc(50% - 20px);
+      height: 300px;
+      border: 1px solid;
+      margin: 10px;
+      float: left;
+    }
+    </style>
+  </head>
+  <body>
 
-<div class="atras">
-  <span>Buscar</span>
-</div>
+    <div class="atras">
+      <span>Buscar</span>
+    </div>
 
-<div class="frente">
-  <div class="frente__input">
-    <input placeholder="Digite aqui o nome da música ou artista" />
-  </div>
-  <div class="frente__cards">
-    <div class="card"></div>
-    <div class="card"></div>
-    
-    <div class="card"></div>
-    <div class="card"></div>
-    
-    <div class="card"></div>
-    <div class="card"></div>
-    
-    <div class="card"></div>
-    <div class="card"></div>
-  </div>
-</div>
+    <div class="frente">
+      <div class="frente__input">
+        <input placeholder="Digite aqui o nome da música ou artista" />
+      </div>
+      <div class="frente__cards">
+        <div class="card"></div>
+        <div class="card"></div>
+        
+        <div class="card"></div>
+        <div class="card"></div>
+        
+        <div class="card"></div>
+        <div class="card"></div>
+        
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+    </div>
 
 
-<script>
-const $body = document.querySelector('body');
-$body.onscroll = function() {
-  const $atras = document.querySelector('.atras');
-  
-  const opacity =  1 - (1 * ( window.scrollY / 200 ));
-  const topmargin = 100 - window.scrollY * 0.15;
-  
-  $atras.style.fontSize = `${topmargin}px`;
-  $atras.style.color = `rgba(255, 255, 255, ${opacity})`;
-  console.log(opacity);
-};
-$body.onscroll();
-</script>
+    <script>
+    const $body = document.querySelector('body');
+    $body.onscroll = function() {
+      const $atras = document.querySelector('.atras');
+      
+      const opacity =  1 - (1 * ( window.scrollY / 200 ));
+      const topmargin = 100 - window.scrollY * 0.15;
+      
+      $atras.style.fontSize = `${topmargin}px`;
+      $atras.style.color = `rgba(255, 255, 255, ${opacity})`;
+    };
+    $body.onscroll();
+    </script>
 
-</body>
+  </body>
 </html>
