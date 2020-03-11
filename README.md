@@ -1,2 +1,3 @@
-# guilherme-spotify
-Mockup do spotify para o guilherme|hidden
+# Spotify mockup
+
+Mockup com efeito de transição similar ao do app do Spotify
